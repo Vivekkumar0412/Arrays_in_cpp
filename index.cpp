@@ -74,44 +74,65 @@
 
 
 // UNIQUE NUMBER IN AN ARRAY
+// #include<bits/stdc++.h>
+// using namespace std;
+// void printArr(int arr[], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     };
+// };
+// void uniqueVal (int arr[],int n){
+//     for(int i = 0; i<n; i++){
+//         int count = 0;
+//         for(int j = 0; j<n; j++){
+//             if(i == j){
+//                 continue;
+//             };
+//             if(arr[i] == arr[j]){
+//                 count++;
+//             };
+            
+//         };
+//         if(count == 0){
+//                 cout<<arr[i]<<" ";
+//                 break;
+//             }
+//     }
+// };
+// int uniqueElem(int arr[], int n){
+//     int ans = 0;
+//     for(int i =0; i<n; i++){
+//         ans = ans ^ arr[i];
+//     };
+//     return ans;
+// }
+// int main(){
+//     int arr[] = {1,1,2,3,4,5,2,3,5};
+//     int n = 9;
+//     uniqueVal(arr,n);
+//     cout<<"This is using xor : "<<uniqueElem(arr,n);
+
+// };
+
+
+// REPEATED ELEMENT IN AN ARRAY
+
 #include<bits/stdc++.h>
 using namespace std;
-void printArr(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    };
-};
-void uniqueVal (int arr[],int n){
+int main(){
+    int arr[] = {1,2,3,4,5,3};
+    int n = 6;
+    int ans = 0;
     for(int i = 0; i<n; i++){
-        int count = 0;
-        for(int j = 0; j<n; j++){
-            if(i == j){
-                continue;
-            };
+        for(int j = i + 1; j<n; j++){
             if(arr[i] == arr[j]){
-                count++;
-            };
-            
-        };
-        if(count == 0){
-                cout<<arr[i]<<" ";
+
+                cout<<"brute force : "<<arr[i]<<endl;
                 break;
             }
+        }
     }
-};
-int uniqueElem(int arr[], int n){
-    int ans = 0;
-    for(int i =0; i<n; i++){
-        ans = ans ^ arr[i];
-    };
-    return ans;
-}
-int main(){
-    int arr[] = {1,1,2,3,4,5,2,3,5};
-    int n = 9;
-    uniqueVal(arr,n);
-    cout<<"This is using xor : "<<uniqueElem(arr,n);
 
 }
