@@ -119,27 +119,47 @@
 
 // REPEATED ELEMENT IN AN ARRAY
 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int arr[] = {1,2,3,4,5,3};
+//     int n = 6;
+//     int ans = 0;
+//     for(int i = 0; i<n; i++){
+//         for(int j = i + 1; j<n; j++){
+//             if(arr[i] == arr[j]){
+
+//                 cout<<"brute force : "<<arr[i]<<endl;
+//                 break;
+//             }
+//         }
+//     }
+//         for(int i = 0; i<n; i++){
+//         ans = ans ^ arr[i];
+        
+//     };
+//     for(int i = 1; i<n; i++){
+//         ans = ans ^ i;
+//     };
+//     cout<<ans;
+// };
+
+// INTERSECTION OF ARRAYS 
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int arr[] = {1,2,3,4,5,3};
+    int arr[] = {1, 2, 2, 2, 3, 4};
+    int arr2[] = {2,2,3};
     int n = 6;
-    int ans = 0;
+    int m = 3;
     for(int i = 0; i<n; i++){
-        for(int j = i + 1; j<n; j++){
-            if(arr[i] == arr[j]){
-
-                cout<<"brute force : "<<arr[i]<<endl;
+        for(int j = 0; j<m; j++){
+            if(arr[i] == arr2[j]){
+                cout<<arr2[j]<<" ";
+                arr2[j] = -1;
                 break;
             }
         }
     }
-        for(int i = 0; i<n; i++){
-        ans = ans ^ arr[i];
-        
-    };
-    for(int i = 1; i<n; i++){
-        ans = ans ^ i;
-    };
-    cout<<ans;
 }
