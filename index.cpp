@@ -146,6 +146,27 @@
 
 // INTERSECTION OF ARRAYS 
 
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int arr[] = {1, 2, 2, 2, 3, 4};
+//     int arr2[] = {2,2,3};
+//     int n = 6;
+//     int m = 3;
+//     for(int i = 0; i<n; i++){
+//         for(int j = 0; j<m; j++){
+//             if(arr[i] == arr2[j]){
+//                 cout<<arr2[j]<<" ";
+//                 arr2[j] = -1;
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+
+
+// MORE OPTUMIZED SOLUTION
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
@@ -153,13 +174,18 @@ int main(){
     int arr2[] = {2,2,3};
     int n = 6;
     int m = 3;
-    for(int i = 0; i<n; i++){
-        for(int j = 0; j<m; j++){
-            if(arr[i] == arr2[j]){
-                cout<<arr2[j]<<" ";
-                arr2[j] = -1;
-                break;
-            }
+    int i = 0, j = 0;
+    while (i<n && j <m)
+    {
+        if(arr[i] == arr2[j]){
+            cout<<arr[i]<<" ";
+            i++;
+            j++;
+        }else if(arr[i] < arr2[j]){
+            i++;
+        }else{
+            j++;
         }
     }
+    
 }
