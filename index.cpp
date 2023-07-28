@@ -44,7 +44,37 @@
 // };
 
 // SWAP ALTERNATES
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+// void printArr(int arr[], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     };
+// }
+// void swapArr(int arr[], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         int temp = arr[i];
+//         arr[i] = arr[i+1];
+//         arr[i+1] = temp;
+//         i++;
+//     };
+// }
+// int main()
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6, 7, 9,11};
+//     int n = 9;
+//     swapArr(arr,n);
+//     printArr(arr, n);
+//     return 0;
+// }
+
+
+// UNIQUE NUMBER IN AN ARRAY
+#include<bits/stdc++.h>
 using namespace std;
 void printArr(int arr[], int n)
 {
@@ -52,22 +82,28 @@ void printArr(int arr[], int n)
     {
         cout << arr[i] << " ";
     };
+};
+void uniqueVal (int arr[],int n){
+    for(int i = 0; i<n; i++){
+        int count = 0;
+        for(int j = 0; j<n; j++){
+            if(i == j){
+                continue;
+            };
+            if(arr[i] == arr[j]){
+                count++;
+            };
+            
+        };
+        if(count == 0){
+                cout<<arr[i]<<" ";
+                break;
+            }
+    }
 }
-void swapArr(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        int temp = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = temp;
-        i++;
-    };
-}
-int main()
-{
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 9,11};
+int main(){
+    int arr[] = {1,1,2,3,4,5,2,3,5};
     int n = 9;
-    swapArr(arr,n);
-    printArr(arr, n);
-    return 0;
+    uniqueVal(arr,n);
+
 }
