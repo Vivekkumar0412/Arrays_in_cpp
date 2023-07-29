@@ -167,25 +167,68 @@
 
 
 // MORE OPTUMIZED SOLUTION
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-    int arr[] = {1, 2, 2, 2, 3, 4};
-    int arr2[] = {2,2,3};
-    int n = 6;
-    int m = 3;
-    int i = 0, j = 0;
-    while (i<n && j <m)
-    {
-        if(arr[i] == arr2[j]){
-            cout<<arr[i]<<" ";
-            i++;
-            j++;
-        }else if(arr[i] < arr2[j]){
-            i++;
-        }else{
-            j++;
-        }
-    }
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int arr[] = {1, 2, 2, 2, 3, 4};
+//     int arr2[] = {2,2,3};
+//     int n = 6;
+//     int m = 3;
+//     int i = 0, j = 0;
+//     while (i<n && j <m)
+//     {
+//         if(arr[i] == arr2[j]){
+//             cout<<arr[i]<<" ";
+//             i++;
+//             j++;
+//         }else if(arr[i] < arr2[j]){
+//             i++;
+//         }else{
+//             j++;
+//         }
+//     }
     
+// };
+
+
+// SORT THE 0s , 1s and 2s in an array
+#include <iostream>
+using namespace std;
+void pri(int arr[], int n){
+    for(int i = 0; i<n; i++){
+        cout<<arr[i]<<" ";
+    };
+};
+
+void sortArr(int arr[], int n){
+    int zero = 0;
+    int one = 0;
+    int two = 0;
+    for(int i = 0; i<n; i++){
+        if(arr[i] == 0){
+            zero++;
+        }else if(arr[i] == 1){
+            one++;
+        }else{
+            two++;
+        }
+    };
+
+    for(int i = 0; i<zero; i++){
+        arr[i] = 0;
+    };
+    for(int i = zero; i<zero + one; i++){
+        arr[i] = 1;
+    };
+    for(int i = zero + one; i<zero +one + two; i++){
+        arr[i] = 2;
+    };
+    pri(arr,n);
+}
+int main() {
+    // Write C++ code here
+   int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1};
+   int n =21;
+   sortArr(arr,n);
+    return 0;
 }
