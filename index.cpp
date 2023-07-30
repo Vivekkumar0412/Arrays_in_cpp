@@ -230,5 +230,6 @@ int main() {
    int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1};
    int n =21;
    sortArr(arr,n);
+   sortArr(arr,n);
     return 0;
 }
