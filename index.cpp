@@ -227,9 +227,8 @@ void sortArr(int arr[], int n){
 }
 int main() {
     // Write C++ code here
-   int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1};
-   int n =21;
-   sortArr(arr,n);
+   int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1,0};
+   int n =22;
    sortArr(arr,n);
     return 0;
 }
