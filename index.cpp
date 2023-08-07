@@ -192,43 +192,71 @@
 
 
 // SORT THE 0s , 1s and 2s in an array
+// #include <iostream>
+// using namespace std;
+// void pri(int arr[], int n){
+//     for(int i = 0; i<n; i++){
+//         cout<<arr[i]<<" ";
+//     };
+// };
+
+// void sortArr(int arr[], int n){
+//     int zero = 0;
+//     int one = 0;
+//     int two = 0;
+//     for(int i = 0; i<n; i++){
+//         if(arr[i] == 0){
+//             zero++;
+//         }else if(arr[i] == 1){
+//             one++;
+//         }else{
+//             two++;
+//         }
+//     };
+
+//     for(int i = 0; i<zero; i++){
+//         arr[i] = 0;
+//     };
+//     for(int i = zero; i<zero + one; i++){
+//         arr[i] = 1;
+//     };
+//     for(int i = zero + one; i<zero +one + two; i++){
+//         arr[i] = 2;
+//     };
+//     pri(arr,n);
+// }
+// int main() {
+//     // Write C++ code here
+//    int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1,0};
+//    int n =22;
+//    sortArr(arr,n);
+//     return 0;
+// }
+
+// finding the intersectio of two arrays using XOR ^ operator
 #include <iostream>
 using namespace std;
-void pri(int arr[], int n){
-    for(int i = 0; i<n; i++){
-        cout<<arr[i]<<" ";
-    };
-};
-
-void sortArr(int arr[], int n){
-    int zero = 0;
-    int one = 0;
-    int two = 0;
-    for(int i = 0; i<n; i++){
-        if(arr[i] == 0){
-            zero++;
-        }else if(arr[i] == 1){
-            one++;
-        }else{
-            two++;
-        }
-    };
-
-    for(int i = 0; i<zero; i++){
-        arr[i] = 0;
-    };
-    for(int i = zero; i<zero + one; i++){
-        arr[i] = 1;
-    };
-    for(int i = zero + one; i<zero +one + two; i++){
-        arr[i] = 2;
-    };
-    pri(arr,n);
-}
 int main() {
-    // Write C++ code here
-   int arr[] = {1,0,0,0,0,1,1,1,1,1,2,2,2,1,1,2,2,2,0,0,1,0};
-   int n =22;
-   sortArr(arr,n);
+    int arr[] = {1,2,3,4,5,6,7,8,40,90,100};
+    int arr2[] = {4,7,8,9,12,30,90};
+    int n = 11;
+    int m = 7;
+    int i = 0;
+    int j = 0;
+    int ans = -100;
+    cout<<ans;
+    while(i<n && j<m){
+        ans = arr[i] ^ arr2[j];
+        if(ans == 0){
+            cout<<arr[i]<<" ";
+
+            i++;
+            j++;
+        }else if(arr[i]<arr2[j]){
+            i++;
+        }else{
+            j++;
+        }
+    }
     return 0;
 }
