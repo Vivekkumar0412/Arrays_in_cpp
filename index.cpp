@@ -233,30 +233,192 @@
 //     return 0;
 // }
 
-// finding the intersectio of two arrays using XOR ^ operator
+// finding the intersection of two arrays using XOR ^ operator
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int arr[] = {1,2,3,4,5,6,7,8,40,90,100};
+//     int arr2[] = {4,7,8,9,12,30,90};
+//     int n = 11;
+//     int m = 7;
+//     int i = 0;
+//     int j = 0;
+//     int ans = -100;
+//     cout<<ans;
+//     while(i<n && j<m){
+//         ans = arr[i] ^ arr2[j];
+//         if(ans == 0){
+//             cout<<arr[i]<<" ";
+
+//             i++;
+//             j++;
+//         }else if(arr[i]<arr2[j]){
+//             i++;
+//         }else{
+//             j++;
+//         }
+//     }
+//     return 0;
+// };
+
+// BINARY SEARCH
+// #include <iostream>
+// using namespace std;
+// int binarSearch(int arr[], int s, int n){
+//     int start = 0;
+//     int end = s -1;
+//     int mid = (start + end)/2;
+//     while(start <= end){
+//         if(arr[mid] == n){
+//             return mid;
+//         };
+//         if(n>arr[mid]){
+//             start = mid + 1;
+//         }else{
+//             end = mid - 1;
+//         };
+//         mid = (start + end)/2;
+//     };
+//     return -1;
+// };
+
+// int search(int arr[],int size, int target) {
+//   // Write your code here
+//     int start = 0;
+//     int end = size-1;
+//     int mid =  (  start + end) / 2;
+//     while (start <= end)
+//      {
+//       if (arr[mid] == target) {
+//         return mid;
+//       };
+//       if (target > arr[mid]) {
+//         start = mid + 1;
+//       } else {
+//         end = mid - 1;
+//       };
+//       mid =  ( start+ end ) / 2;
+//     };
+//     return -1;
+  
+// }
+// int main() {
+//     int arr[] = {1,2,3,4,5,6,7,8};
+//     int arr2[] = {4,7,8,9};
+//     int arr3[] = {};
+//     // int ans = binarSearch(arr,8,7);
+//     // cout<<"the index is : "<<ans<<endl;
+//     int ans = search(arr,8,8);
+//     cout<<"The index is : "<<ans;
+//     return 0;
+// }
+
+// IMP QUESTION first and last occurance of the element in a sorted array
+// #include <iostream>
+// using namespace std;
+// int Occurance(int arr[], int s, int n){
+//     int arr2[2] = {0};
+//     int start = 0;
+//     int end = s - 1;
+//     int mid = start + (end - start)/2;
+//     while (start <= end)
+//     {
+//         if(arr[mid] == n){
+//             arr2[0] = mid;
+//             end = mid - 1;
+//         }
+//        else if(arr[mid] < n){
+//             start = mid +1;
+//         }else{
+//             end = mid -1;
+//         };
+//         mid = start + (end - start)/2;
+//     };
+//     // cout<< "The first occurance is : "<<arr2[0]<<endl;
+//     return arr2[0];
+    
+// };
+// int rightOccurance(int arr[], int s, int n){
+//         int arr2[2] = {0};
+//     int start = 0;
+//     int end = s - 1;
+//     int mid = start + (end - start)/2;
+//     while (start <= end)
+//     {
+//         if(arr[mid] == n){
+//             arr2[0] = mid;
+//             start = mid + 1;
+//         }
+//         else if(arr[mid] < n){
+//             start = mid +1;
+//         }else{
+//             end = mid -1;
+//         };
+//         mid = start + (end - start)/2;
+//     };
+//     // cout<< "The last occurance is : "<<arr2[0]<<endl;
+//     return arr2[0];
+// };
+// int countOfVal(int arr[],int s, int n){
+//     int firstOccurance = Occurance(arr,s,n);
+//     int lastOccurance = rightOccurance(arr, s, n);
+//     int count = 0;
+//     for(int i = firstOccurance; i<= lastOccurance; i++){
+//         // if(arr[i] == n){
+//             count++;
+//         // };
+//     };
+//     return count;
+// }
+// int main(){
+//     int arr[] = {1,2,5,5,5,5,5,5,5,6,7,8};
+//     int s = 12;
+//     // int n = Occurance(arr,12,5)
+//     // rightOccurance(arr,12,5);
+//     int c = countOfVal(arr, s, 5);
+//     cout<<"The count of c is : "<<c<<endl;
+//     return 0;
+    
+// };
+
+
+// find the peak element in an array.
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int arr[] = {0,10,11,12,45,5,2};
+//     for(int i = 0; i<7; i++){
+//         if(arr[i] > arr[i+1] && arr[i] > arr[i-1]){
+//             cout<<"The index is : "<<i<<endl;
+//         }
+//     };
+// };
+
+// FIND THE PEAK ELEMENT IN AN ARRAY USING BINARY SEARCH
 #include <iostream>
 using namespace std;
-int main() {
-    int arr[] = {1,2,3,4,5,6,7,8,40,90,100};
-    int arr2[] = {4,7,8,9,12,30,90};
-    int n = 11;
-    int m = 7;
-    int i = 0;
-    int j = 0;
-    int ans = -100;
-    cout<<ans;
-    while(i<n && j<m){
-        ans = arr[i] ^ arr2[j];
-        if(ans == 0){
-            cout<<arr[i]<<" ";
-
-            i++;
-            j++;
-        }else if(arr[i]<arr2[j]){
-            i++;
-        }else{
-            j++;
-        }
-    }
-    return 0;
+int findPeak(int arr[], int n){
+    int start = 0;
+    int end = n-1;
+    int mid = start + (end - start)/2;
+    
+    while(start <= end){
+        if(arr[mid] > arr[mid - 1] && arr[mid] < arr[mid +1]){
+            // cout<<"FOUND THE MID VALUE : "<<mid;
+            // break;
+            return mid;
+        }else if(arr[mid] < arr[mid + 1]){
+            start = mid;
+        }else if(arr[mid] < arr[mid - 1]){
+            end = mid;
+        };
+        mid = start + (end - start)/2;
+    };
+    return mid;
+}
+int main(){
+    
+    int arr[] = {1,3,20,4,1,0};
+    int ans = findPeak(arr, 6);
+    cout<<"The ans is : "<<ans;
 }
