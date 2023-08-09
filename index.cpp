@@ -383,16 +383,16 @@
 
 
 // find the peak element in an array.
-// #include <iostream>
-// using namespace std;
-// int main(){
-//     int arr[] = {0,10,11,12,45,5,2};
-//     for(int i = 0; i<7; i++){
-//         if(arr[i] > arr[i+1] && arr[i] > arr[i-1]){
-//             cout<<"The index is : "<<i<<endl;
-//         }
-//     };
-// };
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[] = {0,10,11,12,45,5,2};
+    for(int i = 0; i<7; i++){
+        if(arr[i] > arr[i+1] && arr[i] > arr[i-1]){
+            cout<<"The index is : "<<i<<endl;
+        }
+    };
+};
 
 // FIND THE PEAK ELEMENT IN AN ARRAY USING BINARY SEARCH
 #include <iostream>
