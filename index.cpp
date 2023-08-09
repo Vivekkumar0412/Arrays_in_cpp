@@ -416,9 +416,9 @@ int findPeak(int arr[], int n){
     };
     return mid;
 }
-int main(){
+// int main(){
     
-    int arr[] = {1,3,20,4,1,0};
-    int ans = findPeak(arr, 6);
-    cout<<"The ans is : "<<ans;
-}
+//     int arr[] = {1,3,20,4,1,0};
+//     int ans = findPeak(arr, 6);
+//     cout<<"The ans is : "<<ans;
+// }
