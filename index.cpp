@@ -314,72 +314,72 @@
 // }
 
 // IMP QUESTION first and last occurance of the element in a sorted array
-// #include <iostream>
-// using namespace std;
-// int Occurance(int arr[], int s, int n){
-//     int arr2[2] = {0};
-//     int start = 0;
-//     int end = s - 1;
-//     int mid = start + (end - start)/2;
-//     while (start <= end)
-//     {
-//         if(arr[mid] == n){
-//             arr2[0] = mid;
-//             end = mid - 1;
-//         }
-//        else if(arr[mid] < n){
-//             start = mid +1;
-//         }else{
-//             end = mid -1;
-//         };
-//         mid = start + (end - start)/2;
-//     };
-//     // cout<< "The first occurance is : "<<arr2[0]<<endl;
-//     return arr2[0];
+#include <iostream>
+using namespace std;
+int Occurance(int arr[], int s, int n){
+    int arr2[2] = {0};
+    int start = 0;
+    int end = s - 1;
+    int mid = start + (end - start)/2;
+    while (start <= end)
+    {
+        if(arr[mid] == n){
+            arr2[0] = mid;
+            end = mid - 1;
+        }
+       else if(arr[mid] < n){
+            start = mid +1;
+        }else{
+            end = mid -1;
+        };
+        mid = start + (end - start)/2;
+    };
+    // cout<< "The first occurance is : "<<arr2[0]<<endl;
+    return arr2[0];
     
-// };
-// int rightOccurance(int arr[], int s, int n){
-//         int arr2[2] = {0};
-//     int start = 0;
-//     int end = s - 1;
-//     int mid = start + (end - start)/2;
-//     while (start <= end)
-//     {
-//         if(arr[mid] == n){
-//             arr2[0] = mid;
-//             start = mid + 1;
-//         }
-//         else if(arr[mid] < n){
-//             start = mid +1;
-//         }else{
-//             end = mid -1;
-//         };
-//         mid = start + (end - start)/2;
-//     };
-//     // cout<< "The last occurance is : "<<arr2[0]<<endl;
-//     return arr2[0];
-// };
-// int countOfVal(int arr[],int s, int n){
-//     int firstOccurance = Occurance(arr,s,n);
-//     int lastOccurance = rightOccurance(arr, s, n);
-//     int count = 0;
-//     for(int i = firstOccurance; i<= lastOccurance; i++){
-//         // if(arr[i] == n){
-//             count++;
-//         // };
-//     };
-//     return count;
-// }
-// int main(){
-//     int arr[] = {1,2,5,5,5,5,5,5,5,6,7,8};
-//     int s = 12;
-//     // int n = Occurance(arr,12,5)
-//     // rightOccurance(arr,12,5);
-//     int c = countOfVal(arr, s, 5);
-//     cout<<"The count of c is : "<<c<<endl;
-//     return 0;
+};
+int rightOccurance(int arr[], int s, int n){
+        int arr2[2] = {0};
+    int start = 0;
+    int end = s - 1;
+    int mid = start + (end - start)/2;
+    while (start <= end)
+    {
+        if(arr[mid] == n){
+            arr2[0] = mid;
+            start = mid + 1;
+        }
+        else if(arr[mid] < n){
+            start = mid +1;
+        }else{
+            end = mid -1;
+        };
+        mid = start + (end - start)/2;
+    };
+    // cout<< "The last occurance is : "<<arr2[0]<<endl;
+    return arr2[0];
+};
+int countOfVal(int arr[],int s, int n){
+    int firstOccurance = Occurance(arr,s,n);
+    int lastOccurance = rightOccurance(arr, s, n);
+    int count = 0;
+    for(int i = firstOccurance; i<= lastOccurance; i++){
+        // if(arr[i] == n){
+            count++;
+        // };
+    };
+    return count;
+}
+int main(){
+    int arr[] = {1,2,5,5,5,5,5,5,5,6,7,8};
+    int s = 12;
+    // int n = Occurance(arr,12,5)
+    // rightOccurance(arr,12,5);
+    int c = countOfVal(arr, s, 5);
+    cout<<"The count of c is : "<<c<<endl;
+    return 0;
     
-// };
+};
 
 
 // find the peak element in an array.
