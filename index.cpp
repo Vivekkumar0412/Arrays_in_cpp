@@ -262,56 +262,56 @@
 // };
 
 // BINARY SEARCH
-// #include <iostream>
-// using namespace std;
-// int binarSearch(int arr[], int s, int n){
-//     int start = 0;
-//     int end = s -1;
-//     int mid = (start + end)/2;
-//     while(start <= end){
-//         if(arr[mid] == n){
-//             return mid;
-//         };
-//         if(n>arr[mid]){
-//             start = mid + 1;
-//         }else{
-//             end = mid - 1;
-//         };
-//         mid = (start + end)/2;
-//     };
-//     return -1;
-// };
+#include <iostream>
+using namespace std;
+int binarSearch(int arr[], int s, int n){
+    int start = 0;
+    int end = s -1;
+    int mid = (start + end)/2;
+    while(start <= end){
+        if(arr[mid] == n){
+            return mid;
+        };
+        if(n>arr[mid]){
+            start = mid + 1;
+        }else{
+            end = mid - 1;
+        };
+        mid = (start + end)/2;
+    };
+    return -1;
+};
 
-// int search(int arr[],int size, int target) {
-//   // Write your code here
-//     int start = 0;
-//     int end = size-1;
-//     int mid =  (  start + end) / 2;
-//     while (start <= end)
-//      {
-//       if (arr[mid] == target) {
-//         return mid;
-//       };
-//       if (target > arr[mid]) {
-//         start = mid + 1;
-//       } else {
-//         end = mid - 1;
-//       };
-//       mid =  ( start+ end ) / 2;
-//     };
-//     return -1;
+int search(int arr[],int size, int target) {
+  // Write your code here
+    int start = 0;
+    int end = size-1;
+    int mid =  (  start + end) / 2;
+    while (start <= end)
+     {
+      if (arr[mid] == target) {
+        return mid;
+      };
+      if (target > arr[mid]) {
+        start = mid + 1;
+      } else {
+        end = mid - 1;
+      };
+      mid =  ( start+ end ) / 2;
+    };
+    return -1;
   
-// }
-// int main() {
-//     int arr[] = {1,2,3,4,5,6,7,8};
-//     int arr2[] = {4,7,8,9};
-//     int arr3[] = {};
-//     // int ans = binarSearch(arr,8,7);
-//     // cout<<"the index is : "<<ans<<endl;
-//     int ans = search(arr,8,8);
-//     cout<<"The index is : "<<ans;
-//     return 0;
-// }
+}
+int main() {
+    int arr[] = {1,2,3,4,5,6,7,8};
+    int arr2[] = {4,7,8,9};
+    int arr3[] = {};
+    // int ans = binarSearch(arr,8,7);
+    // cout<<"the index is : "<<ans<<endl;
+    int ans = search(arr,8,8);
+    cout<<"The index is : "<<ans;
+    return 0;
+}
 
 // IMP QUESTION first and last occurance of the element in a sorted array
 #include <iostream>
