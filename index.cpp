@@ -395,6 +395,34 @@ int main(){
 };
 
 // FIND THE PEAK ELEMENT IN AN ARRAY USING BINARY SEARCH
+// #include <iostream>
+// using namespace std;
+// int findPeak(int arr[], int n){
+//     int start = 0;
+//     int end = n-1;
+//     int mid = start + (end - start)/2;
+    
+//     while(start <= end){
+//         if(arr[mid] > arr[mid - 1] && arr[mid] < arr[mid +1]){
+//             // cout<<"FOUND THE MID VALUE : "<<mid;
+//             // break;
+//             return mid;
+//         }else if(arr[mid] < arr[mid + 1]){
+//             start = mid;
+//         }else if(arr[mid] < arr[mid - 1]){
+//             end = mid;
+//         };
+//         mid = start + (end - start)/2;
+//     };
+//     return mid;
+// }
+// int main(){
+    
+//     int arr[] = {1,3,20,4,1,0};
+//     int ans = findPeak(arr, 6);
+//     cout<<"The ans is : "<<ans;
+// }
+
 #include <iostream>
 using namespace std;
 int findPeak(int arr[], int n){
@@ -416,9 +444,3 @@ int findPeak(int arr[], int n){
     };
     return mid;
 }
-// int main(){
-    
-//     int arr[] = {1,3,20,4,1,0};
-//     int ans = findPeak(arr, 6);
-//     cout<<"The ans is : "<<ans;
-// }
