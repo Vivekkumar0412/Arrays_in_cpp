@@ -12,6 +12,7 @@ int main() {
         arr[j] = temp;
         i++;
         j--;
+        j--;
     };
     int k = 0;
     while( k<=5){
