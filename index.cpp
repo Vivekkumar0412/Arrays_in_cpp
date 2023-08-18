@@ -438,6 +438,7 @@ int findPeak(int arr[], int n){
             return mid;
         }else if(arr[mid] < arr[mid + 1]){
             start = mid;
+            start = mid;
         }else if(arr[mid] < arr[mid - 1]){
             end = mid;
         };
