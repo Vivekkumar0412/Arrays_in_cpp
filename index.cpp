@@ -327,6 +327,7 @@ int Occurance(int arr[], int s, int n){
         if(arr[mid] == n){
             arr2[0] = mid;
             end = mid - 1;
+            end = mid - 1;
         }
        else if(arr[mid] < n){
             start = mid +1;
